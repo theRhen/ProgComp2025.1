@@ -29,7 +29,3 @@ if 20 <= media < 60: # Media entre 20 e 59.9 = Aluno em prova final
 if media < 20: # Nota menor que 20 = Aluno reprovado direto
     print("Situação do aluno: REPROVADO")
     print("----------------------------------------")
-    
-
-    
-    
