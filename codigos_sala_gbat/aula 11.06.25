@@ -1,0 +1,21 @@
+#aula 11/06/2025
+
+s = "MariaLuiza"
+
+print(s[1:5]) # aria
+print(s[0:5]) # Maria
+print(s[:5]) # Maria "se nao tive posição, posição = 0"
+print(s[0:10]) # MariaLuiza "a ultima nunca mostra"
+
+pos = 3
+print(s[pos:pos + 2]) # ia
+print(s[pos:len(s)]) # iaLuiza
+print(s[0:len(s)]) # MariaLuiza  
+
+print(s[0:len(s):2]) # Mrauz # pula 2 em 2
+print(s[::2]) # Mrauz # pula 2 em 2
+
+n = "Giovanna"
+
+print(n[-8:-4])
+print(n[-8:-4])
