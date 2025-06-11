@@ -25,3 +25,9 @@ print(n[-8:-4]) # Giov
 print(n[-8:-4:-2]) #
 print(n[4:-1]) # ann
 print(n[::-1]) # annavoiG
+
+x = input("Digite um número: ")
+y = x[::-1]
+
+if x == y:
+    print("palidromo")
