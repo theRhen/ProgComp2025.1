@@ -13,9 +13,14 @@ print(s[pos:len(s)]) # iaLuiza
 print(s[0:len(s)]) # MariaLuiza  
 
 print(s[0:len(s):2]) # Mrauz # pula 2 em 2
+print(s[::]) # MariaLuiza
 print(s[::2]) # Mrauz # pula 2 em 2
+print(s[1:5:-1])
+print(s[5:1:-1]) # Lair 
 
 n = "Giovanna"
 
-print(n[-8:-4])
-print(n[-8:-4])
+print(n[-8:-6]) # Gi
+print(n[-8:-4]) # Giov
+print(n[-8:-4:-2]) #
+print(n[4:-1]) # ann
