@@ -1,0 +1,13 @@
+Lista Numérica
+
+Crie um programa que leia sucessivamente números maiores que 0 e os armazene em uma lista. A entrada de dados deve ser encerrada quando for digitado um número menor ou igual a 0.
+
+Após isso, responda:
+
+a) Qual o tamanho da lista?
+b) Pergunte por um número e responda:
+  • Quantas vezes esse número aparece na lista?
+  • Em qual posição ele aparece pela primeira vez?
+c) Qual o menor número da lista?
+d) Qual o maior número da lista?
+e) Qual a soma dos elementos da lista?
