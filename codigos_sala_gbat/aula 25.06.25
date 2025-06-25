@@ -11,3 +11,25 @@ b) Pergunte por um número e responda:
 c) Qual o menor número da lista?
 d) Qual o maior número da lista?
 e) Qual a soma dos elementos da lista?
+
+numero = 1
+lista = []
+
+print("------------------------------------------------------------------------------")
+print("                               LISTA NUMÉRICA")
+print("Digite números maiores que 0. Para encerrar, digite um número maior/igual a 0.")
+print("------------------------------------------------------------------------------")
+
+while numero > 0:
+    numero = int(input("Digite um número: "))
+
+    if numero > 0:
+        lista.append(numero)
+
+    print(lista)
+
+tamanho = 0 # a) qual o tamanho da lista
+
+for numero in lista:
+    tamanho = tamanho + 1
+print("O tamanho da lista é:",tamanho)
