@@ -1,35 +1,33 @@
-Lista Numérica
+s = "MariaLuiza" # String com 10 caracteres (índices: M = 0, a = 1, r = 2, i = 3, a = 4, L = 5, u = 6, i = 7, z = 8, a = 9)
 
-Crie um programa que leia sucessivamente números maiores que 0 e os armazene em uma lista. A entrada de dados deve ser encerrada quando for digitado um número menor ou igual a 0.
+print(s) # String completa: MariaLuiza
+ 
+print(s[1:5])    # Imprime os caracteres do índice 1 ao 4: 'aria'
+print(s[0:5])    # Imprime os caracteres do índice 0 ao 4: 'Maria'
+print(s[:5])     # Imprime os caracteres do início até o índice 4: 'Maria' (vazio = 0)
+print(s[0:10])   # Imprime os caracteres do índice 0 ao 9 (toda a string): 'MariaLuiza'
 
-Após isso, responda:
+pos = 3
+print(s[pos:pos+2])    # Imprime os caracteres do índice 3 ao 4: 'ia' (pos = 3, pos+2 = 5)
+print(s[pos:len(s)])   # Imprime os caracteres do índice 3 até o final: 'iaLuiza'
+print(s[0:len(s)])     # Imprime os caracteres do índice 0 até o final: 'MariaLuiza' (equivale a s[:])
 
-a) Qual o tamanho da lista?
-b) Pergunte por um número e responda:
-  • Quantas vezes esse número aparece na lista?
-  • Em qual posição ele aparece pela primeira vez?
-c) Qual o menor número da lista?
-d) Qual o maior número da lista?
-e) Qual a soma dos elementos da lista?
+print (s[:len(s):2])    # Mrauz
+print (s[::])           # MariaLuiza
+print (s[::2])          # Mrauz
+print (s[1:5:-1])       # 
+print (s[5:1:-1])       # Lair
 
-numero = 1
-lista = []
+n = "Giovanna"
+print (n[-8:-6])        # Gi
+print (n[-8:-4])        # Giov
+print (n[-8:-4:2])      # Go
+print (n[:4:-1])        # ann
+print (n[::-1])         # annavoiG
 
-print("------------------------------------------------------------------------------")
-print("                               LISTA NUMÉRICA")
-print("Digite números maiores que 0. Para encerrar, digite um número maior/igual a 0.")
-print("------------------------------------------------------------------------------")
+print (n[2+3*5-10-3.2:4])
+x = input ("Digite um numero: ")
+y = x[::-1]
 
-while numero > 0:
-    numero = int(input("Digite um número: "))
-
-    if numero > 0:
-        lista.append(numero)
-
-    print(lista)
-
-tamanho = 0 # a) qual o tamanho da lista
-
-for numero in lista:
-    tamanho = tamanho + 1
-print("O tamanho da lista é:",tamanho)
+if x == y:
+    print ("palindromo")
