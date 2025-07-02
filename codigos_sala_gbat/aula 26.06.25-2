@@ -1,1 +1,32 @@
+s = "MariaLuiza" # String com 10 caracteres (índices: M = 0, a = 1, r = 2, i = 3, a = 4, L = 5, u = 6, i = 7, z = 8, a = 9)
+
+print(s) # String completa: MariaLuiza
+ 
+print(s[0]) # Imprime o primeiro caracter - índice 0: "M"
+print(s[9]) # Imprime o último caracter - índice 9: "a" 
+print(s[0:5]) # Imprime "Maria" - índice 0 até 5
+print(s[5:10]) # Imprime "Luiza" - índice 5 até 9 (10 não conta "Índice 5 até 9")
+
+print(s[1:5])    # Imprime os caracteres do índice 1 ao 4: 'aria'
+print(s[0:5])    # Imprime os caracteres do índice 0 ao 4: 'Maria'
+print(s[:5])     # Imprime os caracteres do início até o índice 4: 'Maria' (vazio = 0)
+print(s[0:10])   # Imprime os caracteres do índice 0 ao 9 (toda a string): 'MariaLuiza'
+
+pos = 3
+print(s[pos:pos+2])    # Imprime os caracteres do índice 3 ao 4: 'ia' (pos = 3, pos+2 = 5)
+print(s[pos:len(s)])   # Imprime os caracteres do índice 3 até o final: 'iaLuiza'
+print(s[0:len(s)])     # Imprime os caracteres do índice 0 até o final: 'MariaLuiza' (equivale a s[:])
+
+print (s[:len(s):2])    # Mrauz
+print (s[::])           # MariaLuiza
+print (s[::2])          # Mrauz
+print (s[1:5:-1])       # 
+print (s[5:1:-1])       # Lair
+
+n = "Giovanna"
+print (n[-8:-6])        # Gi
+print (n[-8:-4])        # Giov
+print (n[-8:-4:2])      # Go
+print (n[:4:-1])        # ann
+print (n[::-1])         # annavoiG
 
