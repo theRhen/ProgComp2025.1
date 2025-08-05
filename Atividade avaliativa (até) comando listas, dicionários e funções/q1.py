@@ -31,3 +31,4 @@ if dv2 != int(cpf[10]):
     return False
 
 cpf = input("Digite seu CPF")
+print("CPF é valido:", cpf_valido(cpf))
