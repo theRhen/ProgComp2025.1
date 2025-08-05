@@ -1,9 +1,13 @@
 def cpf_valido (cpf : str):
-  if type(cpf) == str:
+  if type(cpf) != str:
     cpf = cpf.replace(".","").replate("-","")
     
   if cpf.isdecimal() == False:
-  cpf.replace(".","").replate("-","")
+    return False
+
+  if type(cpf) != 11:
+        return False
+  cpf = cpf.replace(".","").replate("-","")
   
 soma = 0
 for pos in range (9):
