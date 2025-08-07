@@ -53,7 +53,7 @@ while True:
                 cpf_limpo = cpf_input.replace(".", "").replace("-", "")
 
                 if cpf_limpo not in banco_dados:
-                    print("CPF informado não cadastrado.")
+                    print(f"CPF {cpf_limpo}: não cadastrado.")
                 else:
                     mac = input("Digite o MAC address: ").strip()
 
@@ -64,7 +64,7 @@ while True:
                             print("Este MAC já está vinculado a esse CPF.")
                         else:
                             banco_dados[cpf_limpo].append(mac)
-                            print(f"MAC {mac} adicionado ao CPF {cpf_input} com sucesso!")
+                            print(f"MAC {mac} -> CPF {cpf_input}: vinculado com sucesso!")
             
         if opcao == 3:
             print("\nVocê escolheu: 3 - Remover um MAC address de um CPF")
@@ -107,20 +107,70 @@ while True:
                         print("Não é possível remover o CPF. Existem MACs vinculados.")
                     else:
                         del banco_dados[cpf_limpo]
-                        print("CPF removido com sucesso.")
+                        print(f"CPF {cpf_limpo} removido com sucesso.")
 
-
-        elif opcao == 5:
+        if opcao == 5:
             print("\nVocê escolheu: 5 - Listar os CPFs cadastrados")
 
-        elif opcao == 6:
+            if len(banco_dados) == 0:
+                print("Nenhum CPF cadastrado no sistema.")
+            else:
+                print("CPFs cadastrados:")
+                for cpf in banco_dados:
+                    print(f"cpf - {cpf}")
+
+        if opcao == 6:
             print("\nVocê escolheu: 6 - Listar os MAC addresses vinculados a um CPF")
+
+            cpf_input = input("Digite o CPF para listar os MACs vinculados: ").strip()
+
+            if cpf_valido(cpf_input) == False:
+                print("CPF inválido!")
+            else:
+                cpf_limpo = cpf_input.replace(".", "").replace("-", "")
+
+                if cpf_limpo not in banco_dados:
+                    print("CPF não está cadastrado.")
+                else:
+                    macs = banco_dados[cpf_limpo]
+                    if len(macs) == 0:
+                        print("Nenhum MAC address vinculado a esse CPF.")
+                    else:
+                        print(f"MAC addresses vinculados ao CPF {cpf_input}:")
+                        for mac in macs:
+                            print(f"- {mac}")
 
         elif opcao == 7:
             print("\nVocê escolheu: 7 - Salvar o banco de dados em um arquivo")
 
+            import json
+
+            nome_arquivo = input("Digite o nome do arquivo para salvar (ex: dados.json): ").strip()
+
+            try:
+                with open(nome_arquivo, 'w') as arquivo:
+                    json.dump(banco_dados, arquivo, indent=4)
+                print(f"Banco de dados salvo com sucesso em '{nome_arquivo}'!")
+            except Exception as e:
+                print(f"Erro ao salvar o arquivo: {e}")
+
         elif opcao == 8:
             print("\nVocê escolheu: 8 - Ler o banco de dados de um arquivo")
+
+            import json
+
+            nome_arquivo = input("Digite o nome do arquivo para ler (ex: dados.json): ").strip()
+
+            try:
+                with open(nome_arquivo, 'r') as arquivo:
+                    banco_dados = json.load(arquivo)
+                print(f"Banco de dados carregado com sucesso de '{nome_arquivo}'!")
+            except FileNotFoundError:
+                print("Arquivo não encontrado.")
+            except json.JSONDecodeError:
+                print("Erro: o arquivo não está em formato JSON válido.")
+            except Exception as e:
+                print(f"Erro ao ler o arquivo: {e}")
 
         elif opcao == 9:
             print("\nEncerrando o programa...")
