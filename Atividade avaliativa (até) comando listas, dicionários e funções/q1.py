@@ -9,18 +9,19 @@ while True:
     print(" ----------------------------------------------------------------------- ")
     print("|                            MENU DE OPÇÕES                             |")
     print(" ----------------------------------------------------------------------- ")
-    
-    print("1 - Cadastrar CPF")
-    print("2 - Adicionar MAC address a um CPF")
-    print("3 - Remover um MAC address de um CPF")
-    print("4 - Remover o CPF (só permitir se não existirem MAC addresses vinculados)")
-    print("5 - Listar os CPFs cadastrados")
-    print("6 - Listar os MAC addresses vinculados a um CPF")
-    print("7 - Salvar o banco de dados em um arquivo")
-    print("8 - Ler o banco de dados de um arquivo")
-    print("9 - Sair")
+    print(" ----------------------------------------------------------------------- ")
+    print("| 1 - Cadastrar CPF                                                     |")
+    print("| 2 - Adicionar MAC address a um CPF                                    |")
+    print("| 3 - Remover um MAC address de um CPF                                  |")
+    print("| 4 - Remover o CPF                                                     |") # só permitir se não existirem MAC addresses vinculados
+    print("| 5 - Listar os CPFs cadastrados                                        |")
+    print("| 6 - Listar os MAC addresses vinculados a um CPF                       |")
+    print("| 7 - Salvar o banco de dados em um arquivo                             |")
+    print("| 8 - Ler o banco de dados de um arquivo                                |")
+    print("| 9 - Sair                                                              |")
+    print(" ----------------------------------------------------------------------- ")
 
-    opcao = input("\nDigite a opção de menu desejada: ")
+    opcao = input("Digite a opção de menu desejada: ")
 
     if opcao.isdigit():
         opcao = int(opcao)
@@ -29,9 +30,9 @@ while True:
             print("\nVocê escolheu: 1 - Cadastrar CPF")
             
             cpf_input = input("Digite o CPF para cadastrar: ").strip()
-            
+                
             if cpf_valido(cpf_input) == False:
-                print("CPF inválido! Tente novamente.")
+                print("\nCPF inválido! Tente novamente.")
             else:
                 cpf_limpo = cpf_input.replace(".", "").replace("-", "")
                 
@@ -125,6 +126,6 @@ while True:
             print("\nEncerrando o programa...")
             break
         else:
-            print("\nDigite uma opção existente.")
+            print("\nExecução finalizada.")
     else:
         print("\nOpção inválida. Digite um número válido.")
