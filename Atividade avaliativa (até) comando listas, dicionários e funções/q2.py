@@ -1,29 +1,19 @@
-# Função para verificar se um número é palíndromo (sem usar strings)
-def eh_palindromo(n):
-    original = n         # Armazena o valor original
-    invertido = 0        # Vai guardar o número invertido
+def func_palindromo(n):
+    x = n
+    invertido = 0
 
     while n > 0:
-        digito = n % 10              # Pega o último dígito
-        invertido = invertido * 10 + digito  # Constrói o número invertido
-        n = n // 10                  # Remove o último dígito
+        resto = n % 10
+        invertido = invertido * 10 + resto
+        n = n // 10
 
-    return invertido == original     # Retorna True se for palíndromo
+    return x == invertido
 
-# Programa principal
-def contar_palindromos():
-    try:
-        contador = 0
+contador = 0
 
-        # Verifica todos os números de 10 até 100000 (inclusive)
-        for numero in range(10, 100001):
-            if eh_palindromo(numero):
-                contador += 1
+for numero in range(10, 100001):
 
-        print("Quantidade de números palíndromos entre 10 e 100000:", contador)
+    if func_palindromo(numero):
+        contador += 1
 
-    except Exception as e:
-        print("Ocorreu um erro:", e)
-
-# Executa o programa
-contar_palindromos()
+print("Total de palíndromos:", contador)
