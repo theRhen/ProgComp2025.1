@@ -1,3 +1,4 @@
+# Riquelme Henrique da Silva Ferreira
 # Validador MAC
 def mac_valido(mac: str):    
     if type(mac) != str:
