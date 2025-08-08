@@ -23,7 +23,7 @@ while True:
 
     opcao = input("Digite a opção de menu desejada: ")
 
-    if opcao.isdigit():
+    if opcao.isdigit() and 0 < int(opcao) < 10:
         opcao = int(opcao)
 
         if opcao == 1:
