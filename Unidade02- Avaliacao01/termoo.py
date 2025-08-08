@@ -1,3 +1,5 @@
+# Riquelme Henrique da Silva Ferreira
+
 import random
 palavras = (
     "ADAGA", "ADUBO", "AMIGO", "ANEXO", "ARAME", "ARARA", "ARROZ",
