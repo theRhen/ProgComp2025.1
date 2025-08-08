@@ -1,21 +1,18 @@
 # Validador CPF gbat
 def cpf_valido (cpf : str):
+    
     if type(cpf) != str: 
-        print("\nErro: O CPF deve ser uma string.")
+        print("Erro: O CPF deve ser uma string.")
         return False
     
     cpf = cpf.replace(".", "").replace("-", "")
     
-    if cpf == "":
-        print("\nErro: Nenhum CPF foi digitado.")
-        return False
-    
     if cpf.isdecimal() == False:
-        print("\nErro: O CPF deve conter apenas números.")
+        print("Erro: O CPF deve conter apenas números.")
         return False
     
     if len(cpf) != 11:
-        print("\nErro: O CPF deve ter 11 dígitos.")
+        print("Erro: O CPF deve ter 11 dígitos.")
         return False
     
     soma = 0
