@@ -6,8 +6,8 @@ def mac_valido(mac: str):
     
     mac = mac.replace(":", "").replace(".", "").replace("-", "")
     
-    if len(mac) != 4:
-        print("\nErro: O MAC deve ter 4 dígitos.")
+    if len(mac) != 12:
+        print("\nErro: O MAC deve ter 12 dígitos.")
         return False
     
     if mac.isalnum() == False: 
@@ -15,5 +15,5 @@ def mac_valido(mac: str):
         return False
     return True
 
-#mac = input ("Digite seu MAC (xx-xx): ")
+#mac = input ("Digite seu MAC (xx-xx-xx-xx-xx-xx): ")
 #print ("MAC é valido:", mac_valido(mac))  
