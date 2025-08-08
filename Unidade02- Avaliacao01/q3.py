@@ -1,3 +1,5 @@
+# Riquelme Henrique da Silva Ferreira
+
 import random
 
 # Lista de palavras válidas
