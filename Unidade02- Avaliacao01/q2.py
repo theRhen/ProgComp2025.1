@@ -1,3 +1,5 @@
+# Riquelme Henrique da Silva Ferreira
+
 def func_palindromo(n):
     x = n
     invertido = 0
