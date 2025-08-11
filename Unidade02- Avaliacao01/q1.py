@@ -1,5 +1,3 @@
-# Riquelme Henrique da Silva Ferreira
-
 from cpf_validador import cpf_valido # importar o arquivo do validador de CPF
 from mac_validador import mac_valido # importar o arquivo do validador de MAC
 
@@ -142,7 +140,7 @@ while True:
                         for mac in macs:
                             print(f"- {mac}")
 
-        elif opcao == 7:
+        if opcao == 7:
             print("\nVocê escolheu: 7 - Salvar o banco de dados em um arquivo")
 
             import json
@@ -156,7 +154,7 @@ while True:
             except Exception as e:
                 print(f"Erro ao salvar o arquivo: {e}")
 
-        elif opcao == 8:
+        if opcao == 8:
             print("\nVocê escolheu: 8 - Ler o banco de dados de um arquivo")
 
             import json
