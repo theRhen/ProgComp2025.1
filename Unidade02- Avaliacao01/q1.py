@@ -144,8 +144,6 @@ while True:
         if opcao == 7:
             print("\nVocê escolheu: 7 - Salvar o banco de dados em um arquivo")
 
-            import json
-
             nome_arquivo = input("Digite o nome do arquivo para salvar (ex: dados.json): ").strip()
 
             try:
@@ -157,8 +155,6 @@ while True:
 
         if opcao == 8:
             print("\nVocê escolheu: 8 - Ler o banco de dados de um arquivo")
-
-            import json
 
             nome_arquivo = input("Digite o nome do arquivo para ler (ex: dados.json): ").strip()
 
