@@ -1,5 +1,6 @@
 from cpf_validador import cpf_valido # importar o arquivo do validador de CPF
 from mac_validador import mac_valido # importar o arquivo do validador de MAC
+import json
 
 # Dicionário para armazenar os dados: CPF como chave, lista de MACs como valor
 banco_dados = {}
@@ -149,7 +150,7 @@ while True:
 
             try:
                 with open(nome_arquivo, 'w') as arquivo:
-                    json.dump(banco_dados, arquivo, indent=4)
+                    json.dump(banco_dados, arquivo) # # Salva o dicionário 'banco_dados' no arquivo aberto, convertendo os dados para o formato JSON
                 print(f"Banco de dados salvo com sucesso em '{nome_arquivo}'!")
             except Exception as e:
                 print(f"Erro ao salvar o arquivo: {e}")
@@ -165,6 +166,7 @@ while True:
                 with open(nome_arquivo, 'r') as arquivo:
                     banco_dados = json.load(arquivo)
                 print(f"Banco de dados carregado com sucesso de '{nome_arquivo}'!")
+                print(banco_dados)
             except FileNotFoundError:
                 print("Arquivo não encontrado.")
             except json.JSONDecodeError:
